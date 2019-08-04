@@ -14,19 +14,21 @@
 - yum install git
 - yum install wget
 - yum install vim
+- yum install make
 - [MAVEN 설치]
 - [JAVA 설치]
+- [PYTHON 설치] https://dodo-it.tistory.com/69
+- [MYSQL 설치]
 
 
-
-[MAVEN 설치]
-Maven 바이너리 파일 다운로드
+# [MAVEN 설치]
+- Maven 바이너리 파일 다운로드
 $ wget http://mirror.apache-kr.org/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
 
-다운로드 파일 압축 해제
+- 다운로드 파일 압축 해제
 $ tar xzvf apache-maven-3.6.1-bin.tar.gz
 
-MAVEN_HOME 설정
+- MAVEN_HOME 설정
 $ vi ~/.bashrc
   export M2_HOME=/root/program/apache-maven-3.6.1
   export M2=$M2_HOME/bin
@@ -40,8 +42,8 @@ $ mvn -version
  (버전이 출력되면 성공)
  
  
- [JAVA 설치]
- Yum repository 이용해 java 설치
+# [JAVA 설치]
+- Yum repository 이용해 java 설치
 
 $ yum list java*jdk-devel
  (설치 가능한 java 버전 확인)
@@ -51,8 +53,7 @@ $ java -version
 $ javac -version
  (1.8 버전이 출력되면 성공)
 
-
-JAVA_HOME 설정
+- JAVA_HOME 설정
 
 $ vi /etc/profile
   export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64
@@ -61,3 +62,13 @@ $ vi /etc/profile
 $ source /etc/profile
 $ echo $JAVA_HOME
  (지정한 위치가 출력되면 성공)
+
+
+# [MYSQL 설치]
+
+- Mysql yum repository 설치
+$ wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+$ rpm -ivh mysql80-community-release-el7-3.noarch.rpm
+
+- Mysql yum repository 를 이용해 Mysql 설치
+$ yum --enablerepo=mysql80-community install mysql-community-server mysql-server mysql-utilities mysql-workbench mysql-connector-python
