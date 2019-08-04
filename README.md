@@ -6,7 +6,8 @@
 가상 머신은 아니지만 가상머신의 효과를 냄.
 컨테이너 기술은 가상화 기술에 비해 자원을 거의 99.8% 아낀다고함.
 도커는 리눅스에만 유효한 기술이었지만 최근 MS도 가능.
-- http://pyrasis.com/Docker/Docker-HOWTO#section-9
+- 개념 참고 문서 : https://ndb796.tistory.com/90
+- 명령어 참고 문서 : http://pyrasis.com/Docker/Docker-HOWTO#section-9
 
 # 도커 설치하기
 - sudo yum install docker
